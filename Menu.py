@@ -149,7 +149,7 @@ elif PW == "rahul":
 
         elif ("hadoop" in cm):
                     print("==============================================================================")
-                    print("\n\t\t Welcome to Redhat 8 Linux ( Hadoop Commands ) !!\n")
+                    print("\n\t\t Welcome to Hadoop Setup !!\n")
                     #hadoop configuration [ namenode , datanode , client ] 
 
                     #hadoop configuration [ namenode , datanode , client ] 
@@ -467,7 +467,7 @@ elif PW == "rahul":
 
         elif ("partition" in cm) or ("Partition" in cm):
                     print("==============================================================================")
-                    print("\n\t\t Welcome to Redhat 8 Linux ( Linux Partitions ) !!\n")
+                    print("\n\t\t Welcome to Linux Partitions !!\n")
                     # for partation 
                     def parti():
                         import speech_recognition as sr
@@ -599,7 +599,7 @@ elif PW == "rahul":
 
         elif ("Docker" in cm) or ("docker" in cm):
                     print("==============================================================================")
-                    print("\n\t\t Welcome to Redhat 8 Linux ( Basic Docker ) !!\n")
+                    print("\n\t\t Welcome to Docker Setup !!\n")
 
 
 
@@ -710,7 +710,7 @@ elif PW == "rahul":
 
         elif ("webserver" in cm) or ("server" in cm):
                     print("==============================================================================")
-                    print("\n\t\t Welcome to Redhat 8 Linux ( Configure WebServer ) !!\n")  
+                    print("\n\t\t Welcome to Apache Web Server Setup !!\n")  
 
 
 
