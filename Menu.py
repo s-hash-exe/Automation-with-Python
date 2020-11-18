@@ -48,10 +48,11 @@ if PW != "rahul" :
 
 elif PW == "rahul":
     #Menu Card
+    print()
     pt.speak("Here's your Main Menu Card.")
     #os.system("tput setaf 1")
-    print("Basic Linux Commands.")
-    print("Hadoop Setup. ")
+    print("Basic Linux Commands")
+    print("Hadoop Setup ")
     print("Linux Partitions")
     print("Docker Basic")
     print("Webserver Configuration")
@@ -80,7 +81,7 @@ elif PW == "rahul":
         cm = r.recognize_google(audio)
         cm = cm.lower()
         print(" = == = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = \n")
-        if ("linux" in cm):
+        if ("linux" in cm) and ("comm" in cm):
                     print("==============================================================================")
                     print("\n\t\t Welcome to Redhat 8 Linux ( Basic Commands ) !!\n")
                     pt.speak("Enter the remote IP")
@@ -113,7 +114,7 @@ elif PW == "rahul":
                             print("Got it!")
                             pt.speak("Got it.")
                         ch = r.recognize_google(audio)
-                        ch = cm.lower()
+                        ch = ch.lower()
                         print("\t\t=======================================\n")
                         if ("date" in ch):
                             #os.system("tput setaf 4")
@@ -136,7 +137,7 @@ elif PW == "rahul":
                             #os.system("tput setaf 9")
                             os.system("ssh root@{} rm -rf {}".format(ip, rdn))
                             print("Successfully removed directory " +rdn)
-                        elif ("exit" in ch):
+                        elif ("exit" in ch) or ("quit" in ch):
                             #os.system("tput setaf 10")
                             pt.speak("Terminating.")
                             print("Terminating...")
@@ -209,12 +210,12 @@ elif PW == "rahul":
                             pt.speak("Here is your Hadoop Menu Card")
                             print(''' \t\t\t Select Option:
                             Option 1: To configure Namenode
-                            Option 2: To Configurde datanode
+                            Option 2: To Configurde Datanode
                             Option 3: To Configure Client
-                            Option 4: To Start namenode
-                            Option 5: To Stop namenode
-                            Option 6: To Start datanode
-                            Option 7: To Stop datanode
+                            Option 4: To Start Namenode
+                            Option 5: To Stop Namenode
+                            Option 6: To Start Datanode
+                            Option 7: To Stop Datanode
                             Option 8: To Exit
                         ''')
                             pt.speak("""Configure NameNode.
@@ -437,7 +438,7 @@ elif PW == "rahul":
 
                             elif ("stop" in cmd)and("data" in cmd)and("node" in cmd):
                                 stpd()
-                            elif ("exit" in cmd)and("quit" in cmd):
+                            elif ("exit" in cmd)or("quit" in cmd):
                                 print("""Are you sure?
                                 Say Yes to exit and No to continue.""")
                                 pt.speak("""Are you sure?
@@ -445,7 +446,7 @@ elif PW == "rahul":
                                 with sr.Microphone() as source2:
                                     pt.speak("Please start speaking your choice")
                                     print("Here you go...")
-                                    audio2 = r.listen(source1)
+                                    audio2 = r.listen(source2)
                                     print("Got it...")
                                     pt.speak("Got it.")
 
@@ -583,7 +584,7 @@ elif PW == "rahul":
                                     MnF()
                                     print("\n\n\t\t\t==========Partation Successfully Created============\n\n")
                                 elif ("exit" in inp) or ("quit" in inp):
-                                    exit()
+                                    break
                                 else:
                                     print("Your saying something wrong") 
                                     break
@@ -696,7 +697,7 @@ elif PW == "rahul":
                                                         print("\t\t\t========================================\n")
 
                                                     elif("exit" in inp):
-                                                        exit()
+                                                        break
                                                     else:
                                                         py.speak("Not supported ")
                                                         print("not supported")
@@ -775,12 +776,14 @@ elif PW == "rahul":
                                 elif ("create" in ipp) and ("everything" in ipp):
                                     tt() 
                                 else:
-                                    exit()
+                                    break
 
                     WS()
 
 
-        elif("AWS" in cm) or ("aws" in  cm):
+        elif("AWS" in cm) or ("aws" in  cm) or ("a w s" in cm) or ("a ws" in cm) or ("aw s" in cm):
+            print("==============================================================================")
+            print("\n\t\t Welcome to AWS Setup !!\n")
             def aws():
                 import os
                 import subprocess as sp
@@ -1082,11 +1085,3 @@ elif PW == "rahul":
         elif ("exit" in cm):
                     print("Thank You !!! Have a nice day")
                     exit()
-
-
-
-
-
-
-
-
